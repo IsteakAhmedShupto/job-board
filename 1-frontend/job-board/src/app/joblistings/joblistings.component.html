@@ -1,0 +1,82 @@
+<div class="joblistings-container">
+  <div class="joblistings-pagination-container">
+    <div class="joblistings-search">
+      <form>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Search by title, location or salary</mat-label>
+            <input
+              matInput
+              placeholder="Type here"
+              [formControl]="searchInputValue"
+            />
+            <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+        </p>
+        <button
+          (click)="searchFilter()"
+          [type]="'submit'"
+          mat-raised-button
+          color="primary"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <div class="joblistings" *ngIf="resultObj.length > 0">
+      <mat-card
+        class="joblistings-mat-card"
+        *ngFor="let joblisting of resultObj[0].results"
+      >
+        <mat-card-content>
+          <div class="joblistings-card">
+            <div class="joblistings-card-content">
+              <h3>
+                {{ joblisting.title }}
+              </h3>
+              <h4>
+                {{ joblisting.location }}
+              </h4>
+            </div>
+            <div class="joblistings-card-button">
+              <a
+                [routerLink]="['/joblistings', joblisting.id]"
+                mat-stroked-button
+                color="primary"
+                >Details</a
+              >
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="joblistings-prevnext-container">
+      <div class="joblistings-prevnext">
+        <div class="joblistings-prevnext-buttons">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="prevObj()"
+            [disabled]="
+              this.resultObj.length > 0 && this.resultObj[0].previous == null
+            "
+            class="prevnext-left-btn prevnext-btn"
+          >
+            Previous
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="nextObj()"
+            [disabled]="
+              this.resultObj.length > 0 && this.resultObj[0].next == null
+            "
+            class="prevnext-right-btn prevnext-btn"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

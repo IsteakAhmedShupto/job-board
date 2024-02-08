@@ -1,0 +1,67 @@
+<form
+  class="employeredit-form-container"
+  [formGroup]="formGroup"
+  (ngSubmit)="onSubmit()"
+>
+  <h1>
+    <mat-icon>edit</mat-icon>
+    Edit your employer account
+  </h1>
+
+  <mat-card>
+    <mat-card-content>
+      <div class="employeredit-form">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            placeholder="Enter the username you used to log in"
+            formControlName="user"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new name"
+            formControlName="name"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>About</mat-label>
+          <textarea
+            matInput
+            placeholder="Change the description of your company/startup"
+            formControlName="about"
+          >
+          </textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="Enter your new email here"
+            formControlName="email"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Website url</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new website url"
+            formControlName="website"
+          />
+        </mat-form-field>
+        <button
+          class="employeredit-form-submitbtn"
+          mat-raised-button
+          color="primary"
+          [type]="'submit'"
+        >
+          Submit edited data
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>

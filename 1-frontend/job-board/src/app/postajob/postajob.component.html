@@ -1,0 +1,84 @@
+<form
+  class="postajob-form-container"
+  [formGroup]="formGroup"
+  (ngSubmit)="onSubmit()"
+>
+  <h1>
+    <mat-icon>edit</mat-icon>
+    Post a job
+  </h1>
+
+  <mat-card>
+    <mat-card-content>
+      <div class="postajob-form">
+        <mat-form-field>
+          <mat-label>Employer name</mat-label>
+          <input
+            matInput
+            placeholder="Enter the username you used to log in"
+            formControlName="employer"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Job title</mat-label>
+          <input
+            matInput
+            placeholder="Enter the job title"
+            formControlName="title"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Location</mat-label>
+          <input
+            matInput
+            placeholder="Job location"
+            formControlName="location"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea
+            matInput
+            placeholder="Change the description of your company/startup"
+            formControlName="description"
+          >
+          </textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Requirements</mat-label>
+          <input
+            matInput
+            placeholder="Enter your requirements"
+            formControlName="requirements"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>salary</mat-label>
+          <input
+            type="number"
+            matInput
+            placeholder="Enter your salary"
+            formControlName="salary"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Your company email</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="Enter your company email"
+            formControlName="company_email"
+          />
+        </mat-form-field>
+        <button
+          class="postajob-form-submitbtn"
+          mat-raised-button
+          color="primary"
+          [type]="'submit'"
+        >
+          Submit a job
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>

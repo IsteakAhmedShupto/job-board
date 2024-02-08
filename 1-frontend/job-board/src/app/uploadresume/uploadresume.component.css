@@ -1,0 +1,28 @@
+.uploadresume-container {
+  padding: 1rem;
+}
+
+.uploadresume-form-container h1 {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.uploadresume-form-container h1 mat-icon {
+  color: var(--clr-grey-1);
+}
+
+.uploadresume-input mat-label {
+  display: block;
+  color: var(--clr-indigo-5);
+  font-weight: 700;
+}
+
+.uploadresume-form-container mat-card {
+  max-width: 500px;
+}
+
+.uploadresume-form-container mat-card mat-card-content mat-form-field {
+  width: 100%;
+  display: block;
+}

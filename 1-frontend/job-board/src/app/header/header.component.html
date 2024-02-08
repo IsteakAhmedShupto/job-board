@@ -1,0 +1,59 @@
+<nav class="sidenav-container">
+  <ul class="sidenav-lists">
+    <li class="sidenav-list">
+      <a class="sidenav-link" routerLink="/"> <mat-icon>home</mat-icon> Home</a>
+    </li>
+
+    <div *ngIf="!isLoggedIn(); then isCandidateProVisible"></div>
+    <ng-template #isCandidateProVisible>
+      <li class="sidenav-list">
+        <a class="sidenav-link" routerLink="/candidate">
+          <mat-icon>account_circle</mat-icon> Candidate profile</a
+        >
+      </li>
+    </ng-template>
+
+    <div *ngIf="!isLoggedIn(); then isEmployerDashVIsible"></div>
+    <ng-template #isEmployerDashVIsible>
+      <li class="sidenav-list">
+        <a class="sidenav-link" routerLink="/employer">
+          <mat-icon>dashboard</mat-icon> Employer board
+        </a>
+      </li>
+    </ng-template>
+
+    <li class="sidenav-list">
+      <a routerLink="/joblistings" class="sidenav-link">
+        <mat-icon>business_center</mat-icon> Job listings
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <div *ngIf="isLoggedIn(); then isLoginVisible"></div>
+    <ng-template #isLoginVisible>
+      <li class="sidenav-list">
+        <a routerLink="/login" class="sidenav-link">
+          <mat-icon>login</mat-icon> Login
+        </a>
+      </li></ng-template
+    >
+
+    <div *ngIf="isLoggedIn(); then isRegVisible"></div>
+    <ng-template #isRegVisible>
+      <li class="sidenav-list">
+        <a routerLink="/register" class="sidenav-link">
+          <mat-icon>app_registration</mat-icon>Register
+        </a>
+      </li>
+    </ng-template>
+
+    <div *ngIf="!isLoggedIn(); then isLogoutVisible"></div>
+    <ng-template #isLogoutVisible>
+      <li class="sidenav-list">
+        <a class="sidenav-link" (click)="logout()" href="/">
+          <mat-icon>logout</mat-icon>Logout
+        </a>
+      </li>
+    </ng-template>
+  </ul>
+</nav>

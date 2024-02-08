@@ -1,0 +1,141 @@
+<div class="employer-detail-not-loggedin" *ngIf="resultObj.length == 0">
+  <div>
+    You need to login first to view this page. You login session may have been
+    expired.
+  </div>
+  <a
+    class="employer-detail-link"
+    mat-stroked-button
+    color="primary"
+    routerLink="/login"
+  >
+    Login</a
+  >
+</div>
+
+<form
+  class="employer-form-container"
+  *ngIf="resultObj && resultObj.length > 0 && resultObj[0].count == 0"
+  [formGroup]="formGroup"
+  (ngSubmit)="onSubmit()"
+>
+  <h1>
+    <mat-icon>edit</mat-icon>
+    Create your employer account
+  </h1>
+
+  <mat-card>
+    <mat-card-content>
+      <div class="employer-form">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            placeholder="Enter the username you used to log in"
+            formControlName="user"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter your name"
+            formControlName="name"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>About</mat-label>
+          <textarea
+            matInput
+            placeholder="Describe your company/startup in details"
+            formControlName="about"
+          ></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="Enter your email here"
+            formControlName="email"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Website url</mat-label>
+          <input
+            matInput
+            placeholder="Enter your website url"
+            formControlName="website"
+          />
+        </mat-form-field>
+        <button
+          class="employer-form-submitbtn"
+          mat-raised-button
+          color="primary"
+          [type]="'submit'"
+        >
+          Submit
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>
+
+<div class="employer-details" *ngIf="foundObj == true">
+  <form class="employer-form-container">
+    <h1>
+      <mat-icon>edit</mat-icon>
+      Your employer account details
+    </h1>
+    <div class="employer-form-btnlinks">
+      <a
+        class="employer-form-jobposting-link"
+        mat-raised-button
+        color="primary"
+        routerLink="/postajob"
+        >Post a job <mat-icon>local_post_office</mat-icon></a
+      >
+      <a
+        class="employer-details-submitbtn"
+        mat-stroked-button
+        color="primary"
+        [type]="'submit'"
+        routerLink="/employer/edit"
+      >
+        Edit data <mat-icon>edit</mat-icon>
+      </a>
+    </div>
+    <div class="employer-details-container">
+      <mat-card>
+        <mat-card-content>
+          <p>Username</p>
+          <p>{{ resultObj[0].user }}</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card *ngIf="resultObj[0].name.length > 0">
+        <mat-card-content>
+          <p>Name</p>
+          <p>{{ resultObj[0].name }}</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card *ngIf="resultObj[0].about.length > 0">
+        <mat-card-content>
+          <p>About</p>
+          <p>{{ resultObj[0].about }}</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card *ngIf="resultObj[0].about.email > 0">
+        <mat-card-content>
+          <p>Email</p>
+          <p>{{ resultObj[0].email }}</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card *ngIf="resultObj[0].website.length > 0">
+        <mat-card-content>
+          <p>Website</p>
+          <p>{{ resultObj[0].website }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </form>
+</div>

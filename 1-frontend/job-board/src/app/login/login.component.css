@@ -1,0 +1,22 @@
+.login-container {
+  padding: 1rem;
+  min-height: 90vh;
+  background-color: var(--clr-indigo-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
+  max-width: 300px;
+}
+
+.login-form-title {
+  color: var(--clr-grey-1);
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}

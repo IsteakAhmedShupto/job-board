@@ -1,0 +1,49 @@
+.joblistings-container {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.joblistings-search form {
+  display: flex;
+}
+
+.joblistings-search p {
+  margin: 0;
+}
+
+.joblistings-search mat-form-field {
+  width: 450px;
+}
+
+.joblistings-search button {
+  margin: 0 0 0 0.75rem;
+  padding: 1.75rem 1.25rem;
+}
+
+.joblistings-search mat-form-field input {
+  border: 2px solid var(--clr-indigo-5);
+}
+
+.joblistings-mat-card {
+  border-left: 5px solid var(--clr-indigo-5);
+  margin-bottom: 1rem;
+}
+
+.joblistings-prevnext-container {
+  margin-top: 1.45rem;
+}
+
+.joblistings-prevnext {
+  display: flex;
+  align-items: center;
+}
+
+.joblistings-prevnext p {
+  margin: 0 1rem 0 0;
+}
+
+.joblistings-prevnext-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}

@@ -1,0 +1,48 @@
+.employeredit-detail-not-loggedin {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.employeredit-detail-not-loggedin div {
+  margin: 1rem 0;
+}
+
+.employeredit-form-container {
+  padding: 1rem;
+}
+
+.employeredit-form-container h1 {
+  display: flex;
+  align-items: center;
+  text-decoration: underline var(--clr-indigo-5);
+  text-underline-offset: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.employeredit-form-container h1 mat-icon {
+  margin-right: 0.25rem;
+}
+
+.employeredit-form-file-confirm p {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color: var(--clr-indigo-5);
+  font-weight: 700;
+}
+
+.employeredit-form-container mat-card {
+  max-width: 500px;
+}
+
+.employeredit-form mat-form-field:first-child {
+  margin-top: 1rem;
+}
+
+.employeredit-form mat-form-field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.employeredit-form-submitbtn {
+  margin-bottom: 1rem;
+}

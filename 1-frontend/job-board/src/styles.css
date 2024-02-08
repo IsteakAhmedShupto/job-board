@@ -1,0 +1,38 @@
+:root {
+  --clr-grey-1: hsl(0, 0%, 21%);
+  --clr-grey-2: hsl(213, 28%, 37%);
+  --clr-grey-3: hsl(0, 0%, 89%);
+  --clr-grey-4: hsl(0, 0%, 97%);
+  --clr-grey-5: hsl(216, 12%, 84%);
+  --clr-grey-6: hsl(218, 11%, 65%);
+  --clr-orange-1: hsl(20, 100%, 65%);
+  --clr-red-1: hsl(0, 93%, 66%);
+  --clr-red-2: hsl(0, 71%, 52%);
+  --clr-blue-1: hsl(212, 96%, 78%);
+  --clr-blue-2: hsl(213, 94%, 68%);
+  --clr-blue-3: hsl(217, 91%, 60%);
+  --clr-blue-4: hsl(221, 83%, 53%);
+  --clr-blue-5: hsl(224, 76%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-indigo-1: hsl(231, 44%, 94%);
+  --clr-indigo-2: hsl(232, 45%, 84%);
+  --clr-indigo-3: hsl(231, 44%, 74%);
+  --clr-indigo-4: hsl(230, 44%, 64%);
+  --clr-indigo-5: hsl(231, 44%, 50%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

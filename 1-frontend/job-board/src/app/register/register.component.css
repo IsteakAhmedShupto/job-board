@@ -1,0 +1,22 @@
+.register-container {
+  padding: 1rem;
+  min-height: 90vh;
+  background-color: var(--clr-indigo-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form-container {
+  max-width: 300px;
+}
+
+.register-form-title {
+  color: var(--clr-grey-1);
+  text-align: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,110 @@
+<form
+  class="candidate-form-container"
+  [formGroup]="formGroup"
+  (ngSubmit)="onSubmit()"
+>
+  <h1>
+    <mat-icon>edit</mat-icon>
+    Edit your candidate account
+  </h1>
+
+  <mat-card>
+    <mat-card-content>
+      <div class="candidate-form">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            placeholder="Enter the username you used to log in"
+            formControlName="user"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>First name</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new first name"
+            formControlName="first_name"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Last name</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new last name"
+            formControlName="last_name"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="Enter your new email here"
+            formControlName="email"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>About</mat-label>
+          <textarea
+            matInput
+            placeholder="Change the description of your company/startup in details"
+            formControlName="about"
+          ></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Portfolio url</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new portfolio url"
+            formControlName="portfolio"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Github url</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new github url"
+            formControlName="github"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Linkedin url</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new linkedin url"
+            formControlName="linkedin"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>X url</mat-label>
+          <input matInput placeholder="Enter your x url" formControlName="x" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Hashnode url</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new hashnode url"
+            formControlName="hashnode"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Devto url</mat-label>
+          <input
+            matInput
+            placeholder="Enter your new devto url"
+            formControlName="devto"
+          />
+        </mat-form-field>
+        <button
+          class="candidate-form-submitbtn"
+          mat-raised-button
+          color="primary"
+          [type]="'submit'"
+        >
+          Submit edited data
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>

@@ -1,0 +1,33 @@
+.sidenav-container {
+  padding: 0.5rem;
+}
+
+.sidenav-list {
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.sidenav-list:hover {
+  background-color: var(--clr-grey-4);
+  border-radius: 5px;
+}
+
+.sidenav-list:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.sidenav-link {
+  text-decoration: none;
+}
+
+.sidenav-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clr-black);
+}
+
+.sidenav-link mat-icon {
+  color: var(--clr-grey-1);
+}

@@ -1,0 +1,52 @@
+<div class="joblistings-detail-not-loggedin" *ngIf="resultObj.length == 0">
+  <div>You need to login first to view this page.</div>
+  <a
+    class="joblistings-detail-link"
+    mat-stroked-button
+    color="primary"
+    routerLink="/login"
+  >
+    Login</a
+  >
+</div>
+
+<div class="joblistings-detail-container" *ngIf="resultObj.length > 0">
+  <a
+    class="joblistings-detail-link"
+    mat-stroked-button
+    color="primary"
+    routerLink="/joblistings"
+  >
+    <mat-icon>arrow_back</mat-icon>
+    List of all jobs</a
+  >
+  <div class="joblistings-detail-title joblistings-detail-section">
+    <h1>{{ resultObj[0].title }}</h1>
+  </div>
+  <div class="joblistings-detail-location joblistings-detail-section">
+    <h1>Location</h1>
+    <p>{{ resultObj[0].location }}</p>
+  </div>
+  <div class="joblistings-detail-description joblistings-detail-section">
+    <h1>Description</h1>
+    <p>{{ resultObj[0].description }}</p>
+  </div>
+  <div class="joblistings-detail-requirements joblistings-detail-section">
+    <h1>Requirements</h1>
+    <p>{{ resultObj[0].requirements }}</p>
+  </div>
+  <div class="joblistings-detail-salary joblistings-detail-section">
+    <h1>Base Salary</h1>
+    <p>{{ resultObj[0].salary }} USD per annum.</p>
+  </div>
+  <div class="joblistings-detail-listing_date joblistings-detail-section">
+    <h1>Job listing date</h1>
+    <p>{{ date }}</p>
+  </div>
+  <div class="joblistings-detail-link joblistings-detail-section">
+    <a mat-raised-button color="primary" routerLink="/uploadresume">
+      <mat-icon>send</mat-icon>
+      Click here to apply</a
+    >
+  </div>
+</div>

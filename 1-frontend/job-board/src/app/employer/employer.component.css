@@ -1,0 +1,63 @@
+.employer-detail-not-loggedin {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.employer-detail-not-loggedin div {
+  margin: 1rem 0;
+}
+
+.employer-form-container {
+  padding: 1rem;
+}
+
+.employer-form-btnlinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.employer-form-container h1 {
+  display: flex;
+  align-items: center;
+  text-decoration: underline var(--clr-indigo-5);
+  text-underline-offset: 8px;
+  margin-bottom: 2rem;
+}
+
+.employer-form-container h1 mat-icon {
+  margin-right: 0.25rem;
+}
+
+.employer-form-file-confirm p {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color: var(--clr-indigo-5);
+  font-weight: 700;
+}
+
+.employer-form-container mat-card {
+  max-width: 500px;
+}
+
+.employer-form mat-form-field:first-child {
+  margin-top: 1rem;
+}
+
+.employer-form mat-form-field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.employer-form-submitbtn {
+  margin-bottom: 1rem;
+}
+
+.employer-details-container mat-card {
+  margin-bottom: 1rem;
+}
+
+.employer-details-container mat-card mat-card-content p:first-child {
+  font-weight: 700;
+}

@@ -1,0 +1,59 @@
+<div class="uploadresume-container">
+  <div class="uploadresume-form-container" *ngIf="confirm == false">
+    <h1>
+      <mat-icon>attach_email</mat-icon>
+      <p>Send your resume</p>
+    </h1>
+    <mat-card>
+      <mat-card-content>
+        <div class="uploadresume-form">
+          <div class="uploadresume-input">
+            <mat-form-field>
+              <mat-label>Attach resume link</mat-label>
+              <input
+                matInput
+                [(ngModel)]="fileurl"
+                placeholder="Enter your resume link here"
+              />
+            </mat-form-field>
+          </div>
+          <mat-form-field>
+            <mat-label>Job id</mat-label>
+            <input
+              matInput
+              placeholder="Enter the username you used to log in"
+              [(ngModel)]="file_submitted_for"
+              disabled
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Your email</mat-label>
+            <input
+              matInput
+              [(ngModel)]="candidate_email"
+              placeholder="Enter the username you used to log in"
+            />
+          </mat-form-field>
+          <button
+            class="uploadresume-form-submitbtn"
+            mat-raised-button
+            color="primary"
+            type="button"
+            (click)="submitResume()"
+          >
+            Send resume
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="uploadresume-success" *ngIf="confirm == true">
+    <p>
+      Your job application has been successful! We will notify you in your email
+      if you get selected for the interview. Thank you for applying.
+    </p>
+    <a routerLink="/joblistings" mat-raised-button color="primary"
+      >Back to joblistings</a
+    >
+  </div>
+</div>

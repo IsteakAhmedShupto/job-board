@@ -1,0 +1,29 @@
+<mat-drawer-container class="app-container" autosize>
+  <mat-drawer #drawer class="app-sidenav" mode="side" opened="true">
+    <p>
+      <app-header></app-header>
+    </p>
+  </mat-drawer>
+
+  <div class="app-sidenav-content">
+    <div class="app-sidenav-logo"><mat-icon>home</mat-icon>Job board</div>
+    <button
+      color="app-sidenav-button"
+      type="button"
+      mat-icon-button
+      extended
+      (click)="drawer.toggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <router-outlet></router-outlet>
+  <mat-toolbar color="primary">
+    <span class="title">Job board</span>
+    <span class="spacer"></span>
+    <a mat-button routerLink="/about-us">About Us</a>
+    <a mat-button routerLink="/contact">Contact</a>
+    <a mat-button href="/">Terms of Service</a>
+    <a mat-button href="/">Privacy Policy</a>
+  </mat-toolbar>
+</mat-drawer-container>
